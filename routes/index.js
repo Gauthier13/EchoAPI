@@ -12,6 +12,9 @@ const cost = 10;
 var postsModel = require("../models/posts");
 var usersModel = require("../models/users");
 
+router.get('/', (req,res, next) => {
+
+})
 
 // LOG-IN 
 router.post('/login', async (req, res, next) => {
