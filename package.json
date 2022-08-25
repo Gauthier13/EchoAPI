@@ -1,9 +1,13 @@
 {
   "name": "backend",
+  "description": "réseau social géo localisé",
   "version": "5.0.0",
   "private": true,
+  "engines": {
+    "node": "v16.15.1"
+  },
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "node app.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
