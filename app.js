@@ -10,6 +10,12 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 app.use(fileUpload());
+const port = process.env.PORT || 3001;
+
+app.listen(port, () => {
+  console.log( `Server running on port http://localhost:${port}`);
+})
+
 require("./models/connection");
 
 // view engine setup
