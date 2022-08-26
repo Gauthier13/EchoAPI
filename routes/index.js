@@ -26,7 +26,7 @@ router.post('/login', async (req, res, next) => {
 
 	var password = req.body.password
   console.log(req.body.password);
-  console.log("usertoken = " + user);
+  console.log(password);
   
   if (bcrypt.compareSync(password, user.password)) {
    res.json({ login: true, token: user.token  });
@@ -173,6 +173,7 @@ router.post('/search', (req, res, next) => {
 	// récupérer la valeur du champ de saisie
 	// redirect en fonction du nom du compte
 	// redirect en fonction du # (afficher toutes les publications avec le # en question)
+  res.json({result: true})
 });
 
 
