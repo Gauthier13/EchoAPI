@@ -29,7 +29,7 @@ router.post('/login', async (req, res, next) => {
   console.log(password);
   
   if (bcrypt.compareSync(password, user.password)) {
-   res.json({ login: true, token: user.token  });
+   res.json({ login: true, token: user.token, userData: user  });
   } else {
    res.json({ login: false });
   }
